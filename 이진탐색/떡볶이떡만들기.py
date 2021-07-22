@@ -7,6 +7,7 @@ result = 0
 while start <= end:
     total = 0
     mid = (start + end) // 2
+    # print('start = ', start, 'end = ', end, 'mid = ', mid)
     for x in array:
         if x > mid:
             # 잘랐을 때 떡의 양 계산
