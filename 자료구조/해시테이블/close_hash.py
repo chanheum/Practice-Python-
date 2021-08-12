@@ -26,8 +26,8 @@ class CloseHash:
                     self.hash_table[a] = [key, value]
                     return
                 # 같은 key값을 가진거라면 덮어쓴다
-                elif self.hash_table[a][1] == key:
-                    self.hash_table[a] = value
+                elif self.hash_table[a][0] == key:
+                    self.hash_table[a][1] = value
                     return
             return None
         else:
@@ -62,6 +62,8 @@ print(ord(data1[0]), ord(data2[0]), "← 같은 addr를 지칭하고 있음")
 
 h_table.save('aa', '3333')
 h_table.save('ad', '9999')
+h_table.save('aa', '1777')
+h_table.save('af', '888')
 print(h_table.hash_table)
 
 h_table.read('ad')
