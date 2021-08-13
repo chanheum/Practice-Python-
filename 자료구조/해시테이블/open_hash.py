@@ -43,7 +43,7 @@ class OpenHash:
             for a in range(len(self.hash_table[hash_address])):
                 # 같은 키값을 가진 부분을 탐색한다
                 if self.hash_table[hash_address][a][0] == key:
-                    return self.hash_table[hash_address][a][0]
+                    return self.hash_table[hash_address][a][1]
             return False
         else:
             return False
@@ -83,8 +83,8 @@ print(h_table.hash_table)
 h_table.save('aa', '3333')
 print(h_table.hash_table)
 
-h_table.read('aa')
-h_table.read('ad')
+print(h_table.read('aa'))
+print(h_table.read('ad'))
 
 h_table.delete('aa')
 print(h_table.hash_table)
